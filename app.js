@@ -15,8 +15,19 @@ app.set("views", "views");
 app.set("view engine", "pug");
 
 app.get('/', (req, res) => {
-    res.send("Welcome to OTHer.");
+    res.redirect("/dashboard");
 });
+
+//Release 0: for rendering static site
+app.get("/dashboard", (req, res) => {
+    res.render("dashboard");
+})
+
+app.get("/users", (req, res) => {
+    res.render("users");
+})
+
+
 
 app.listen(PORT, function() {
   console.log(`OTHer running and listening on port ${PORT}`);

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    .mt-4
+        h1 Nutzerübersicht
+
+        //dummy user
+        ul.list-group
+            each user in ["Alice Müller", "Bob Schmidt", "Charlie Fischer", "Daniela Weber", "Eva Meier"]
+                li.list-group-item= user
