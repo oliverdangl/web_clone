@@ -1,12 +1,16 @@
 extends layout
 
 block content
+    //Margin top with 1.5 spacer
     .mt-4
 
-        //Dummy posts
+        //Iterating over the dummy post array
         each post in [{user: "Alice", text: "Schaut her mein erster Other :D"}, {user: "Bob", text: "Hey google wo wachsen Bananen? LG Bob"}]
-
+            //Card using margin bottom with default spacer * 1
             .card.mb-3
+                //Content of the card
                 .card-body
+                    //Renders post.user in h5 class card-title
                     h5.card-title= post.user
+                    //Renders post.text in paragraph class card-text
                     p.card-text= post.text

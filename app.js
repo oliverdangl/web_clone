@@ -27,8 +27,6 @@ app.get("/users", (req, res) => {
     res.render("users");
 })
 
-
-
 app.listen(PORT, function() {
   console.log(`OTHer running and listening on port ${PORT}`);
 });
